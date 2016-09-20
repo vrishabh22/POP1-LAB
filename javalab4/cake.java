@@ -1,0 +1,59 @@
+
+import java.lang.*;
+import java.util.*;
+public class cake
+{
+
+static int sum=0;
+static int c=1;
+static int q=0;
+
+
+public static void main(String[] args)
+{
+
+do
+{
+System.out.println("Hello!Welcome to Bakery!");
+Scanner o=new Scanner(System.in);
+System.out.println("unit weight is 100gm.Plz order in units Ex.2 unit cake=200gm");
+System.out.println("cakes ----->1) Honey 2)Black forest 3)Pineapple 4)Plain");
+System.out.println("Enter 1,2,3 or 4 for type of cake");
+int ch=o.nextInt();
+
+switch(ch)
+{
+case 1:System.out.println("you chose honey cake:  Price-Re.50 per unit Color:Brown Taste:very tasty");
+	System.out.println("Enter quantity in units");
+q=o.nextInt();
+sum+=50*q;
+break;
+case 2:System.out.println("you chose black-forrest cake:  Price-Re.150 per unit Color:Black Taste:heavenly");
+        System.out.println("Enter quantity in units");
+q=o.nextInt(); 
+sum+=150*q;
+
+break;
+case 3:System.out.println("you chose Pineapple cake:  Price-Re.100 per unit Color:Yellow Taste:tasty");
+        System.out.println("Enter quantity in units");
+q=o.nextInt(); 
+sum+=100*q;
+
+break;
+case 4:System.out.println("you chose Plain cake:  Price-Re.20 per unit Color:white Taste:okayish");
+        System.out.println("Enter quantity in units");
+q=o.nextInt(); 
+sum+=20*q;
+ 
+break;
+default:System.out.println("wrong choice");
+}
+System.out.println("Do you want to order again?");
+System.out.println("enter 1 for yes,0 for no");
+c=o.nextInt();
+}while(c==1);
+
+System.out.println("Total payable amount is = "+sum);
+
+}
+}
